@@ -6,13 +6,13 @@ macklanb
 CSE 415
 Project: Option 3
 
-This is the MDP class that uses the State class from rubik_cube.py
+This is the MDP class that uses the State class from rubik_cube_180.py
 This class does the Q learning
 
 '''
 
 from random import *
-from rubik_cube import *
+from rubik_cube_180 import *
 
 
 class MDP:
@@ -94,17 +94,18 @@ class MDP:
 
             count = 0
 
-            while not goal_test(self.current_state):
-                s = self.current_state
-                action = self.choose_action(s, learning_rate)
+            # while not goal_test(self.current_state):
+            print(count)
+            s = self.current_state
+            action = self.choose_action(s, learning_rate)
 
-                num_visits = 0
-                if s in self.visits:
-                    num_visits = self.visits[s]
-                self.visits[s] = num_visits + 1
+            num_visits = 0
+            if s in self.visits:
+                num_visits = self.visits[s]
+            self.visits[s] = num_visits + 1
 
-                self.q_values[(s, action)] = self.Q(s, action, discount)
-                count += 1
+            self.q_values[(s, action)] = self.Q(s, action, discount)
+            count += 1
 
             min_rotations = min(min_rotations, count)
 

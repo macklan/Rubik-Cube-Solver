@@ -19,12 +19,12 @@ Uses the State and MDP class to execute Q Learning of a 2x2x2 rubik cube
 '''
 
 from q_learn import *
-from rubik_cube import *
+from rubik_cube_90 import *
 
 directions = ['Front', 'Down', 'Back', 'Up', 'Left', 'Right']
 sides = ['f', 'd', 'b', 'u', 'l', 'r']
 
-OPERATORS = [Operator("Rotate " + str(directions[i]) + " 180 degrees",
+OPERATORS = [Operator("Rotate " + str(directions[i]) + " 90 degrees",
                       lambda s, dir1=sides[i]: s.can_move(dir1),
                       lambda s, dir1=sides[i]: s.move(dir1))
              for i in range(len(sides))]

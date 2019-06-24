@@ -1,12 +1,12 @@
 '''
-rubik_cube.py
+rubik_cube_180.py
 
 Macklan Badger
 macklanb
 CSE 415
 Project: Option 3
 
-Usage: python3 rubik_cube.py
+Usage: python3 rubik_cube_180.py
 
 The Rubik Cube is stored as a array
 The index in the cube array determines the tile on the cube
